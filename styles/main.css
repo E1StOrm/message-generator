@@ -2,6 +2,7 @@ html, body {
     font-family: "Itim", cursive;
     font-weight: 300;
     font-style: normal;
+    background: #232323;
 }
 
 #cover {
@@ -19,24 +20,25 @@ html, body {
     transform: perspective(350px) rotateY(20deg) scaleZ(5);
     transition: transform ease-in-out .5s;
     background-color: #434343;
-    font-size: 1.4em;
-    filter: drop-shadow(5px 5px 7px #787878);
+    font-size: 1.2em;
+    filter: drop-shadow(5px 5px 7px #212121);
     border: #121212 solid 1px;
 }
 
-#message > blockquote::before {
-    font-size: 72px;
-    content: '\201c';
-    left: 10px;
-    top: 0;
+#message > blockquote::before, #message > blockquote::after {
+    font-size: 48px;
     position: absolute;
+}
+
+#message > blockquote::before {
+    content: '\201c';
+    left: 8px;
+    top: 0;
 }
 
 #message > blockquote::after {
     content: '\201e';
-    position: absolute;
-    right: 10px;
-    font-size: 72px;
+    right: 8px;
 }
 
 #message:hover {
@@ -46,7 +48,7 @@ html, body {
 #message > small {
     display: block;
     text-align: right;
-    margin-right: 35px;
+    margin-right: 40px;
 }
 
 #message > small::before {
