@@ -1,0 +1,54 @@
+html, body {
+    font-family: "Itim", cursive;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#cover {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15%;
+    display: flex;
+}
+
+#message {
+    padding: 5px;
+    color: #eee;
+    width: 350px;
+    height: 300px;
+    transform: perspective(350px) rotateY(20deg) scaleZ(5);
+    transition: transform ease-in-out .5s;
+    background-color: #434343;
+    font-size: 1.4em;
+    filter: drop-shadow(5px 5px 7px #787878);
+    border: #121212 solid 1px;
+}
+
+#message > blockquote::before {
+    font-size: 72px;
+    content: '\201c';
+    left: 10px;
+    top: 0;
+    position: absolute;
+}
+
+#message > blockquote::after {
+    content: '\201e';
+    position: absolute;
+    right: 10px;
+    font-size: 72px;
+}
+
+#message:hover {
+    transform: perspective(350px) rotateY(0deg) scaleZ(5);
+}
+
+#message > small {
+    display: block;
+    text-align: right;
+    margin-right: 35px;
+}
+
+#message > small::before {
+    content: "- ";
+}
